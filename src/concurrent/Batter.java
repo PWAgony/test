@@ -12,7 +12,7 @@ public class Batter {
   static class Sugar {}
   static class Flour {}
   static <T> T prepare(T ingredient) {
-    new Nap(0.12);
+    new Nap(0.11);
     return ingredient;
   }
   static <T> CompletableFuture<T> prep(T ingredient) {

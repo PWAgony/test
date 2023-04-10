@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 public class Baked {
   static class Pan {}
   static Pan pan(Batter b) {
-    new Nap(0.12);
+    new Nap(0.11);
     return new Pan();
   }
   static Baked heat(Pan p) {
