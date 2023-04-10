@@ -12,7 +12,7 @@ public class Breakable {
   }
   @Override public String toString() {
     return "Breakable_" + id +
-      " [" + failcount + "]3";
+      " [" + failcount + "]";
   }
   public static Breakable work(Breakable b) {
     if(--b.failcount == 0) {
