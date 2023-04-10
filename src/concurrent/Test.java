@@ -9,11 +9,11 @@ import java.util.concurrent.*;
  */
 public class Test {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(80, 80,
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(30, 30,
                 0L, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
         CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> {
             System.out.println("任务1线程：" + Thread.currentThread().getId());
-            int i = 10 / 2; System.out.println("任务1运行结果：" + i);
+            int i = 10 / 2; System.out.println("任务2运行结果：" + i);
             return i;
         }, executor);
         CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {
