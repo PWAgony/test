@@ -2,8 +2,9 @@ package concurrent;// concurrent/Batter.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import java.util.concurrent.*;
 import onjava.Nap;
+
+import java.util.concurrent.CompletableFuture;
 
 public class Batter {
   static class Eggs {}
@@ -11,7 +12,7 @@ public class Batter {
   static class Sugar {}
   static class Flour {}
   static <T> T prepare(T ingredient) {
-    new Nap(0.1);
+    new Nap(0.12);
     return ingredient;
   }
   static <T> CompletableFuture<T> prep(T ingredient) {
